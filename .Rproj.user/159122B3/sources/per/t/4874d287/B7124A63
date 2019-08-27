@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1566758696715.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "272555850",
+    "id" : "B7124A63",
+    "lastKnownWriteTime" : 1566763637,
+    "last_content_update" : 1566763637518,
+    "path" : "~/projects/R/xr/xray/scrape_medpix.R",
+    "project_path" : "scrape_medpix.R",
+    "properties" : {
+        "cursorPosition" : "7,19",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

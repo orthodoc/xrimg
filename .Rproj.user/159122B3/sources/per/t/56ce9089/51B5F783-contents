@@ -1,0 +1,36 @@
+library(tidyverse)
+library(httr)
+library(xml2)
+library(jsonlite)
+# url : https://openi.nlm.nih.gov/gridquery?it=xg,xm,x&m=1&n=100
+
+#total.images <- 46387
+total.images <- 899
+imgs.per.page <- 100
+m <- seq(from=1, to=total.images, by=imgs.per.page)
+n <- seq(from=imgs.per.page, to=total.images, by=imgs.per.page)
+n <- append(n, total.images, after = length(n))
+list <- data.frame(m, n)
+query.url <- "https://openi.nlm.nih.gov/api/search?it=xg,xm,x&"
+pages <- str_c(query.url, 'm=', list$m,'&n=', list$n, '&sp=or')
+
+get.data.from.url <- function(path) {
+  request <- GET(url = path)
+  response <- content(request, as="text", encoding = "UTF-8")
+  df <- fromJSON(response, flatten=TRUE) %>%
+    data.frame()
+  img.list <- select(df, title=list.title, img150=list.imgGrid150, problem=list.Problems,imgL=list.imgLarge, imgCaption=list.image.caption )
+  img.list$img150 <- str_c("https://openi.nlm.nih.gov", img.list$img150)
+  img.list$imgL <- str_c("https://openi.nlm.nih.gov", img.list$imgL)
+  img.list
+}
+
+write.table <- function() {
+  pages %>%
+    map(get.data.from.url) %>%
+    bind_rows() %>%
+    write_tsv('nihImgList.tsv')
+}
+write.table()
+nih.img.list <- read_tsv("nihImgList.tsv")
+View(nih.img.list)

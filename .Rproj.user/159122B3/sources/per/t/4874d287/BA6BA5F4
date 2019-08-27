@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1566758624304.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "526074952",
+    "id" : "BA6BA5F4",
+    "lastKnownWriteTime" : 1566762592,
+    "last_content_update" : 1566762592727,
+    "path" : "~/projects/R/xr/xray/scrape_OL.R",
+    "project_path" : "scrape_OL.R",
+    "properties" : {
+        "cursorPosition" : "79,2",
+        "scrollLine" : "55",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
