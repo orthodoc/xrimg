@@ -1,1 +1,5 @@
 .RData
+.Rproj.user
+creds/**
+.httr-oauth
+img/**

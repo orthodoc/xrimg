@@ -1,0 +1,2 @@
+GCS_AUTH_FILE="~/projects/R/xr/xray/creds/VSCode-7e8aaa5474d7.json"
+GCS_DEFAULT_BUCKET = "xray.orthodoc.in"

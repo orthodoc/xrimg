@@ -3,6 +3,7 @@ library(httr)
 library(xml2)
 library(jsonlite)
 library(rvest)
+
 # url : https://openi.nlm.nih.gov/gridquery?it=xg,xm,x&m=1&n=100
 
 #total.images <- 46837 : xg,xm,x
