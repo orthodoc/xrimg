@@ -17,11 +17,14 @@ get.img <- function(imgList) {
   #       yes = file.path("img", str_c(imgList[1], "-", basename(imgList[3]))),
   #       no = file.path("img", basename(imgList[3]))
   #       )
-  filepath <- file.path("img", str_c(id, ".png"))
+  filename <- str_c(id, ".png") %>%
+    str_trim()
+  filepath <- file.path("img", filename)
   save_image <- function(img) {
     image_write(img, filepath)
   }
   imgList[4] %>%
+    URLencode() %>%
     image_read() %>%
     image_convert(format = "png") %>%
     save_image()

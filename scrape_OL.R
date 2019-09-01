@@ -87,6 +87,7 @@ ortho.list.tbl$imgURL[182] <- "http://orthopaediclist.com/mm5/graphics/00000001/
 ortho.list.tbl$imgURL[183] <- "http://orthopaediclist.com/mm5/graphics/00000001/TKA Lat 20150911.jpg"
 ortho.list.tbl$imgURL[198] <- "http://orthopaediclist.com/mm5/graphics/00000001/Osteonics HA THA Cooper 20140708.jpg"
 ortho.list.tbl$imgURL[376] <- "http://orthopaediclist.com/mm5/graphics/00000001/TibialNailMaimin20180801.jpg"
+write_tsv(ortho.list.tbl, "orthoList.tsv")
 
 
 ortho.img.list <- read_tsv("orthoList.tsv")
