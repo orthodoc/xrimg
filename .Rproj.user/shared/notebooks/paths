@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/bdb/.Renviron="222C8BE3"
 /Users/bdb/_gcssave.yaml="5D2FF6FC"
 /Users/bdb/projects/R/xr/xray/.Renviron.sample="84CB1388"
@@ -11,3 +12,6 @@
 /Users/bdb/projects/R/xr/xray/post_img_download.R="FC39E246"
 /Users/bdb/projects/R/xr/xray/scrape_medpix.R="BD819AE6"
 /Users/bdb/projects/R/xr/xray/utility.R="E026519B"
+=======
+/home/bdb/xrimg/.gitignore="D0996231"
+>>>>>>> 5e14e36f72bf597731f9b2395679bef7f8a55c99

@@ -4,3 +4,4 @@ creds/**
 .httr-oauth
 img/**
 .DS_Store
+.Rproj.user/**
