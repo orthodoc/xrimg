@@ -1,0 +1,5 @@
+# Place this file in the home directory for auto authentication
+GCS_AUTH_FILE="~/projects/R/xr/xray/creds/gcs-vm.json"
+GCS_DEFAULT_BUCKET="xray.orthodoc.in"
+GCS_DEFAULT_PROJECT_ID="VsCode"
+GCS_DEFAULT_ZOME="asia-south-1"
