@@ -1,7 +1,7 @@
 .First <- function(){
   
   cat("\n# Welcome orthodoc! Today is ", date(), "\n")
-  cat("\n# Loading .Rprofile from", path.expand("~/projects/R/xr/xray"), "\n")
+  cat("\n# Loading .Rprofile from", path.expand("~/xrimg"), "\n")
   
   googleCloudStorageR::gcs_first()
 }
@@ -13,4 +13,4 @@
 
 }
 
-message("n*** Successfully loaded .Rprofile ***n")
+message("\n*** Successfully loaded .Rprofile ***\n")

@@ -1,17 +1,17 @@
-<<<<<<< HEAD
 /Users/bdb/.Renviron="222C8BE3"
 /Users/bdb/_gcssave.yaml="5D2FF6FC"
+/Users/bdb/projects/R/xr/xray/.RProfile="22A0D240"
 /Users/bdb/projects/R/xr/xray/.Renviron.sample="84CB1388"
-/Users/bdb/projects/R/xr/xray/Gauth.R.backup="5EB867FA"
+/Users/bdb/projects/R/xr/xray/.Rhistory="878E4CBB"
+/Users/bdb/projects/R/xr/xray/.gitignore="5F27964F"
 /Users/bdb/projects/R/xr/xray/_gcssave.yaml="931B85B3"
 /Users/bdb/projects/R/xr/xray/creds/VSCode-7e8aaa5474d7.json="CA7A9EF7"
 /Users/bdb/projects/R/xr/xray/creds/gcs-vm.json="774EC9A5"
 /Users/bdb/projects/R/xr/xray/gce-vm.R="B14ED4A6"
 /Users/bdb/projects/R/xr/xray/img_download.R="EFCB94EB"
+/Users/bdb/projects/R/xr/xray/install.Rtf_install="1F0F1C19"
 /Users/bdb/projects/R/xr/xray/load_img_lists.R="5391916A"
 /Users/bdb/projects/R/xr/xray/post_img_download.R="FC39E246"
 /Users/bdb/projects/R/xr/xray/scrape_medpix.R="BD819AE6"
+/Users/bdb/projects/R/xr/xray/tf_install.R="B45180B6"
 /Users/bdb/projects/R/xr/xray/utility.R="E026519B"
-=======
-/home/bdb/xrimg/.gitignore="D0996231"
->>>>>>> 5e14e36f72bf597731f9b2395679bef7f8a55c99
