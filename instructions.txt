@@ -1,0 +1,20 @@
+Instructions
+---
+Three files included in the zip file
+1. imgList.tsv - a tsv file with all the data
+2. img folder with all the images
+3. this instructions text file
+
+imgList.tsv
+---
+id: Serial id 377 is missing - row was removed as it did not have a corresponding image associated
+uid: This is an id that is associated with the images. It is not an universal id as it is associated with multiple images
+title: Title of the original article that the image was associated with
+imgURL: URL of the original image
+imgLocal: filename of the image under the folder img
+
+Unzip the file and you're good to go
+
+install.packages('readr')
+library(readr)
+img.list <- read_tsv('imgList.tsv')

@@ -11,7 +11,7 @@ library(magick)
 # }
 
 get.img <- function(imgList) {
-  id <- imgList[1]
+  id <- str_c(imgList[1], "_", imgList[2])
   # filepath <- ifelse(
   #       test = is.na(str_extract(imgList[3], imgList[1])),
   #       yes = file.path("img", str_c(imgList[1], "-", basename(imgList[3]))),
@@ -30,7 +30,4 @@ get.img <- function(imgList) {
     save_image()
   
 }
-# apply(temp.img.list, 1, get.img)
-
-
-  
+apply(img.list, 1, get.img)

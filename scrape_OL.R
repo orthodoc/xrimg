@@ -1,3 +1,7 @@
+require("rvest")
+require("xml2")
+require("stringr")
+require("tidyverse")
 library(rvest)
 library(xml2)
 library(stringr)
@@ -16,6 +20,7 @@ get.page.numbers <- function(html) {
 }
 
 page.numbers <- get.page.numbers(ortho.list.page)
+# page.numbers <- 30
 
 # function to get offset numbers
 get.offset.numbers <- function(pgNumb) {
@@ -67,10 +72,36 @@ get.data.table <- function(html) {
   combined.data <- tibble(uid = uids, title = titles, imgURL = img.urls)
 }
 
+get.item.link <- function(html) {
+  link_url <- html %>%
+    html_nodes('.ctgy-product-list-box-more') %>%
+    xml_attr('href') %>%
+    unlist()
+}
+
+get.img.caption <- function(link_html) {
+  text <- link_html %>%
+    html_nodes(".product-description-text") %>%
+    html_text()
+  split_text <- str_split(text, "\\r\\n", n = 2)[[1]]
+  caption <- split_text[1] %>%
+    str_trim() %>%
+    unlist()
+}
+
+get.caption.from.link.url <- function(link_url) {
+  link_html <- read_html(link_url)
+  caption <- get.img.caption(link_html)
+}
+
 # function to extract data from the url
 get.data.from.url <- function(url) {
   html <- read_html(url)
-  get.data.table(html)
+  table <- get.data.table(html)
+  caption <- get.item.link(html) %>%
+    map(get.caption.from.link.url) %>% 
+    unlist()
+  combined_table <- add_column(table, caption)
 }
 
 # function to get tsv

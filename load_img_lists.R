@@ -9,7 +9,7 @@ get.ortho.list <- function() {
       gcs_get_object("orthoList.tsv", saveToDisk = "orthoList.tsv")
       ortho.img.list <- read_tsv("orthoList.tsv")
     } else {
-      source('~/projects/R/xr/xray/scrape_OL.R')
+      source('~/xrimg/scrape_OL.R')
       gcs_upload("orthoList.tsv")
     }
   }
@@ -24,7 +24,7 @@ get.nih.list <- function() {
       gcs_get_object("nihImgList.tsv", saveToDisk = "nihImgList.tsv")
       nih.img.list <- read_tsv("nihImgList.tsv")
     } else {
-      source('~/projects/R/xr/xray/scrape_medpix.R')
+      source('~/xrimg/scrape_medpix.R')
       gcs_upload("nihImgList.tsv")
     }
   }

@@ -1,3 +1,8 @@
+install.packages("tidyverse")
+install.packages("httr")
+install.packages("xml2")
+install.packages('jsonlite')
+install.packages("rvest")
 library(tidyverse)
 library(httr)
 library(xml2)
@@ -29,7 +34,7 @@ get.data.from.url <- function(path) {
     discard(is_empty) %>%
     map_if(is.data.frame, list) %>%
     as_tibble() %>%
-    unnest()
+    unnest(cols = c(list))
 }
 
 clean.data <- function(img.df) {
@@ -37,9 +42,10 @@ clean.data <- function(img.df) {
   img.df$MeSH.minor <- NULL
   img.df$imgLarge <- str_c("https://openi.nlm.nih.gov",img.df$imgLarge)
   img.df$title <- ifelse(test = is_empty(img.df$title), yes = "Unknown", no = img.df$title)
-  img.df$image.caption <- ifelse(test = img.df$image.caption == "Not Available.", yes = img.df$title, no = img.df$image.caption)
+  img.df$image.caption <- ifelse(test = img.df$image.caption == "Not Available.", yes = "Unknown", no = img.df$image.caption)
+  # img.df$image.caption <- ifelse(test = img.df$image.caption == "Not Available.", yes = img.df$title, no = img.df$image.caption)
   img.df %>%
-    select(uid,title = image.caption, imgURL = imgLarge) %>%
+    select(uid,title, caption = image.caption, imgURL = imgLarge) %>%
     mutate_all(as.character)
 }
 
