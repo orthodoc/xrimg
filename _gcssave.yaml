@@ -1,0 +1,4 @@
+bucket: xray.orthodoc.in
+load_on_startup: TRUE
+pattern: ".R|.tsv"
+loaddir: "/xray"
