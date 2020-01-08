@@ -12,6 +12,9 @@ uid: This is an id that is associated with the images. It is not an universal id
 title: Title of the original article that the image was associated with
 imgURL: URL of the original image
 imgLocal: filename of the image under the folder img
+impression: clinical impression of the condition associated with the image
+problems: problems assoicated with the image, multiple problems separated by a comma
+Note: Both impressions and problems have several missing values denoted by NA
 
 Unzip the file and you're good to go
 

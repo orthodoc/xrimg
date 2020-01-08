@@ -2,10 +2,6 @@ require("rvest")
 require("xml2")
 require("stringr")
 require("tidyverse")
-library(rvest)
-library(xml2)
-library(stringr)
-library(tidyverse)
 url <- "http://www.orthopaediclist.com/category/implant-identification.html"
 ortho.list.page <- read_html(url)
 
@@ -118,8 +114,17 @@ ortho.list.tbl$imgURL[182] <- "http://orthopaediclist.com/mm5/graphics/00000001/
 ortho.list.tbl$imgURL[183] <- "http://orthopaediclist.com/mm5/graphics/00000001/TKA Lat 20150911.jpg"
 ortho.list.tbl$imgURL[198] <- "http://orthopaediclist.com/mm5/graphics/00000001/Osteonics HA THA Cooper 20140708.jpg"
 ortho.list.tbl$imgURL[376] <- "http://orthopaediclist.com/mm5/graphics/00000001/TibialNailMaimin20180801.jpg"
+ortho.list.tbl['impression'] <- NA
+ortho.list.tbl['problems']<- NA
 write_tsv(ortho.list.tbl, "orthoList.tsv")
 
 
-ortho.img.list <- read_tsv("orthoList.tsv")
+ortho.img.list <- read_tsv("orthoList.tsv", col_types = cols(
+  uid = col_character(),
+  title = col_character(),
+  caption = col_character(),
+  imgURL = col_character(),
+  impression = col_character(),
+  problems = col_character()
+))
 # View(ortho.img.list)
